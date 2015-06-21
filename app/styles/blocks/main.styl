@@ -1,0 +1,210 @@
+
+.form
+	width 77.5%
+	margin auto
+	
+	&__personal
+		margin-bottom 54px
+		width 100%
+		margin-left 5px
+		
+		&__fieldset:not(:first-child)
+			margin-top 26px
+			
+		&__label
+			display table-cell
+			vertical-align bottom
+			white-space nowrap
+			
+		&__text-wrapper
+			padding-left 15px
+			display table-cell
+			width 100%
+
+		&__text
+			padding-left 14px
+			padding-bottom 9px
+			width 100%
+			font-family 'Courier New', monospace
+			font-weight normal
+			font-size 30px
+			vertical-align bottom
+			background url(../images/underline-personal.png) right bottom no-repeat
+
+	&__htmlacademy
+		margin-bottom 51px
+		
+		&__radio-box
+			margin-left 67px
+			display inline-block
+
+		&__radio
+			position absolute
+			left -9999px
+			
+			&:checked + .form__htmlacademy__label i
+				sprite $radio-yes
+				
+		&__label
+			position relative
+			padding-right 52px
+			font-size 22px
+					
+		&__label i
+			position absolute
+			left -41px
+			top -7px
+			sprite $radio-no
+			cursor pointer
+	&__skills
+		margin-bottom 87px
+		
+		&__notice
+			position relative
+			margin-right -11px
+			margin-bottom 12px
+			padding-left 16px
+			padding-top 16px
+			font-size 14px
+			font-weight normal
+			line-height 20px
+				
+			&__snowflake
+				position absolute
+				left 0
+				top 25px
+				font-size 36px
+			
+		&__list
+			list-style none
+			font-size 21px
+			display inline-block
+			vertical-align top
+			
+		&__list-one
+			width 259px
+			
+		&__list-two
+			width 279px
+			
+		&__list-three
+			margin-right -10px
+			width 235px
+			
+		&__row
+			margin-left 28px
+			position relative
+			margin-top 15px
+		
+		&__checkbox
+			position absolute
+			left -9999px
+			
+		&__checkbox:checked + .form__skills__label i
+			sprite $checkbox-yes
+			top -8px
+
+		&__label i
+			sprite $checkbox-no
+			position absolute
+			left -27px
+			top 2px
+			cursor pointer
+	
+	&__js
+		margin-bottom 55px
+		margin-left 5px
+		
+		&__label-table
+			width 100%
+			font-size 13px
+			
+		&__table-cell
+			display table-cell
+			cursor pointer
+			
+		&__label-one
+			padding-left 3px
+			width 150px
+			
+		&__label-two
+			width 228px
+			
+		&__label-three
+			width 170px
+			
+		&__label-four
+			width 215px
+			text-align right
+		
+		&__range
+			margin-top 16px
+			margin-left 0px
+			width 100%
+			height 60px
+			background url(../images/underline.png) no-repeat,
+					url(../images/vertical-line-big.png) -1px 30px no-repeat,
+					url(../images/vertical-line-little.png) 148px 30px no-repeat,
+					url(../images/vertical-line-big.png) 752px 30px no-repeat,
+					url(../images/vertical-line-little.png) 375px 30px no-repeat
+			-webkit-appearance none
+			cursor pointer
+			
+			&::-webkit-slider-thumb
+				margin-top -2px
+				margin-left 0px
+				-webkit-appearance none	
+				sprite $slider
+			
+			&::-moz-range-track
+				background none
+				border none
+
+			&::-moz-range-thumb
+				background none
+				border none
+				border-radius 0
+				sprite $slider
+				
+			&::-ms-track
+				color transparent
+				background none
+				border none
+				
+			&::-ms-fill-lower
+				background none
+				
+			&::-ms-fill-lower
+				background none
+				
+			&::-ms-tooltip
+				display none
+				
+			&::-ms-thumb
+				background none
+				border none
+				margin-top -2px
+				sprite $slider			
+
+	&__date
+		padding-bottom 79px
+		display table
+		
+		&__wrapper
+			display table-row
+		
+		&__label
+			display table-cell
+			vertical-align bottom
+		
+		&__text-wrapper
+			display table-cell
+		
+		&__text
+			padding-bottom 7px
+			padding-left 17px
+			font-family 'Courier New', monospace
+			font-weight normal
+			font-size 30px
+			background url(../images/underline-date.png) 7px bottom no-repeat
+		

@@ -1,0 +1,34 @@
+mixin formPersonal(list)
+	each item in list
+		.form__personal__fieldset
+			label.form__personal__label(for=item[0])=item[1]
+			.form__personal__text-wrapper
+				input.form__personal__text(
+					type='text'
+					name='text'
+					id=item[0]
+					value=item[2]
+				)
+
+mixin formHtmlacademy(list)
+	each item in list
+		input.form__htmlacademy__radio(
+			type= 'radio'
+			name= 'radio'
+			id=item[0]
+			checked=item[2]
+		)
+		label.form__htmlacademy__label(for=item[0])=item[1]
+			i 
+
+mixin formSkill(list)
+	each item in list
+		li.form__skills__row
+			input.form__skills__checkbox(
+				type='checkbox'
+				name='checkbox'
+				id=item[0]
+				checked=item[2]
+			)
+			label.form__skills__label(for=item[0])=item[1]
+				i

@@ -1,0 +1,77 @@
+form.form
+	fieldset.form__personal
+		+formPersonal([
+			['fio', 'Полное ФИО', 'Кудряшов Василий Сергеевич'],
+			['birth-year', 'Год рождения', '1986'],
+			['living-place', 'Место жительства', 'г. Харьков, Украина'],
+			['skype', 'Скайп', 'dot244'],
+			['mail', 'Почта', 'vkud13@gmail.com']
+		])
+	fieldset.form__htmlacademy
+		span Выпускник 
+			a(href='http://htmlacademy.ru' target='_blank' rel='nofollow')
+				|htmlacademy.ru
+		.form__htmlacademy__radio-box
+			+formHtmlacademy([
+				[ 'yes', 'Да', false],
+				[ 'no', 'Нет', true]
+			])
+	fieldset.form__skills
+		legend.form__skills__legend Практические навыки
+		p.form__skills__notice
+			span.form__skills__notice__snowflake *
+			|Отметьте только те технологии и типы задач, с которыми вы хорошо
+			|знакомы. Отсутствие опыта отнюдь не означает, что у вас меньше шансов
+			|стать нашим сотрудником. Это означает, что вы будете получать
+			|те задачи, с которыми гарантировано будете справляться. 
+		ul.form__skills__list.form__skills__list-one
+			+formSkill([
+				['bem', 'Методология БЭМ', false],
+				['jQuery', 'jQuery', false],
+				['grunt', 'Использую Grunt', false],
+				['haml', 'HAML', false],
+				['sass', 'SASS', false],
+				['less', 'LESS', false],
+				['coffeeScript', 'CoffeeScript', false]
+			])
+		ul.form__skills__list.form__skills__list-two
+			+formSkill([
+				['jade', 'Jade', false],
+				['stylus', 'Stylus', false],
+				['angular', 'Знаю (изучаю) Angular', false],
+				['android', 'Верстка под Android', false],
+				['ios', 'Верстка под iOS', false],
+				['winPhone', 'Верстка под Windows Phone', false]
+			])
+		ul.form__skills__list.form__skills__list-three
+			+formSkill([
+				['mail', 'Верстка рассылок', false],
+				['adaptive', 'Адаптивная верстка', false],
+				['dropbox', 'Использую Dropbox', false],
+				['gmail', 'Использую Gmail', false],
+				['git', 'Использую GitHub', false]
+			])		
+	fieldset.form__js
+		legend.form__js__legend Уровень владения JavaScript
+		.form__js__range-wrapper
+			input.form__js__range(type='range' min=0 max=762 value=150)
+		.form__js__label-table
+			.form__js__table-row
+				.form__js__table-cell.form__js__label-one 
+					|Не владею
+				.form__js__table-cell.form__js__label-two 
+					|Использую готовые решения
+				.form__js__table-cell.form__js__label-three
+					|Использую готовые решения и умею их переделывать
+				.form__js__table-cell.form__js__label-four 
+					|Пишу сложные скрипты
+	fieldset.form__date
+		.form__date__wrapper
+			label.form__date__label(for='formDate') Дата заполнения
+			.form__date__text-wrapper
+				input.form__date__text(
+					type='text'
+					name='text'
+					id='formDate'
+					value='17.06.2015'
+				)

@@ -1,0 +1,14 @@
+include ../helpers/variables
+include ../helpers/mixins
+
++script([], ['common.min.js'])
+
+doctype html
+html(lang='ru')
+	include ../blocks/head
+	body
+		.main
+			include ../blocks/header
+			block content
+
+		include ../blocks/scripts
